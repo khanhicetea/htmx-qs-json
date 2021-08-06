@@ -6,6 +6,12 @@ It's better version than original [json-enc](https://htmx.org/extensions/json-en
 
 ## Usage
 
+Add this script below Htmx script
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/khanhicetea/htmx-qs-json@1.0.0/dist/qs-json.min.js"></script>
+```
+
 Add `hx-ext="qs-json"` to form element which you wanted to apply the extension.
 
 ```html
