@@ -1,0 +1,32 @@
+{
+  "name": "htmx-qs-json",
+  "version": "1.0.0",
+  "description": "HTMX Extension which transform URLEncoded Form Data to JSON Data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhicetea/htmx-qs-json.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dist": "mkdirp dist && browserify index.js > dist/qs-json.js",
+    "build:uglify": "npm run-script build:dist && uglifyjs -o dist/qs-json.min.js dist/qs-json.js",
+    "build": "npm run-script build:uglify && gzip -k -f dist/qs-json.js > dist/qs-json.js.gz"
+  },
+  "keywords": [
+    "htmx",
+    "json",
+    "urlencode",
+    "htmx-ext"
+  ],
+  "author": "KhanhIceTea",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "mkdirp": "^1.0.4",
+    "uglify-js": "^3.14.1"
+  },
+  "dependencies": {
+    "qs": "^6.10.1"
+  }
+}
